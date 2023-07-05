@@ -287,10 +287,11 @@ body::-webkit-scrollbar-thumb {
   opacity: 1;
 }
 
-.checkdv_1 {
+#checkdv_1 {
   display: none !important;
   width: 0 !important;
   height: 0 !important;
+  opacity: 0 !important;
 }
 
 header {
@@ -326,7 +327,7 @@ nav {
 }
 
 .logo a img {
-  max-width: 240px;
+  max-width: clamp(8.75rem, 6.071rem + 11.9vw, 15rem);
   width: 100%;
 }
 
@@ -398,9 +399,20 @@ nav {
   gap: 20px;
 }
 
+.hero__item-img {
+  display: none;
+  max-width: 100%;
+  width: 100%;
+  margin-top: 10px;
+}
+
 .hero__text {
   font-weight: 500;
   font-size: clamp(0.75rem, 0.429rem + 1.43vw, 1.5rem);
+}
+
+.hero__img {
+  overflow: hidden;
 }
 
 .hero__img img {
@@ -449,9 +461,29 @@ nav {
   margin: clamp(0.125rem, -0.223rem + 1.55vw, 0.938rem) 0;
 }
 
+.box__item-list {
+  padding-left: 20px;
+}
+
+.box__item-list li {
+  list-style: disc;
+  font-size: clamp(0.75rem, 0.636rem + 0.57vw, 1.063rem);
+  padding-bottom: 2px;
+}
+
 .box__item-btn {
   font-size: clamp(0.813rem, 0.563rem + 1.25vw, 1.5rem);
   margin-top: auto;
+}
+
+.about__wrapper {
+  padding-bottom: 30px;
+}
+
+.about__btn {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .review__swiper {
@@ -775,10 +807,6 @@ button[type=submit]:focus {
 }
 
 @media (max-width: 991.98px) {
-  .logo {
-    display: none;
-  }
-
   .logo-2 {
     display: block;
   }
@@ -936,6 +964,10 @@ button[type=submit]:focus {
     grid-template-columns: 1fr;
   }
 
+  .hero__img {
+    height: 280px;
+  }
+
   .sponsor__wrapper {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px 12px;
@@ -974,6 +1006,14 @@ button[type=submit]:focus {
 
   .hero__item {
     gap: 8px;
+  }
+
+  .hero__item-img {
+    display: block;
+  }
+
+  .hero__img {
+    display: none;
   }
 
   .box {
