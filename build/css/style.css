@@ -153,6 +153,10 @@ section {
   background-position: center;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-weight: 500;
@@ -672,10 +676,6 @@ button[type=submit]:focus {
   height: 100%;
 }
 
-.slogan {
-  padding-bottom: clamp(4.375rem, 2.232rem + 9.52vw, 9.375rem);
-}
-
 .slogan__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -782,9 +782,12 @@ td {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 15px;
+  max-width: 500px;
 }
 
 .contacts__list li {
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -798,6 +801,7 @@ td {
 }
 
 .footer {
+  margin-top: clamp(4.375rem, 2.232rem + 9.52vw, 9.375rem);
   background: #1E1E1E;
   padding: 50px 0 80px;
   color: #EFEFEF;
@@ -818,7 +822,7 @@ td {
 }
 
 .footer__wrapper .logo img {
-  max-width: 100%;
+  max-width: 240px;
   width: 100%;
 }
 
@@ -1114,7 +1118,7 @@ td {
 
   input[type=text],
   textarea {
-    padding: 6px 15px;
+    padding: 10px 15px;
     font-size: 14px;
   }
 
