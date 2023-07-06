@@ -36,7 +36,7 @@
                 </a>
             </div> -->
 
-            <a class="menu__item-link" href="tel:+79657776665">Заказать звонок</a>
+            <a class="menu__item-link modal__btn" id="btn1">Заказать звонок</a>
 
             <a class="menu__item-btn btn" href="tel:+79657776665">+7 (965) 777-66-65</a>
 
@@ -50,16 +50,18 @@
     <nav>
         <div class="container">
             <ul class="menu">
-                <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>О компании</a></li>
-                <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>3D-сканирование</a></li>
+                <li class="menu__item"><a href="about.html" class="menu__item-link" data-scroll>О компании</a></li>
+                <li class="menu__item"><a href="scan.html" class="menu__item-link" data-scroll>3D-сканирование</a></li>
                 <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Реверс инжиниринг</a></li>
                 <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Конструкторские работы</a></li>
-                <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Контакты</a></li>
+                <li class="menu__item"><a href="contacts.html" class="menu__item-link" data-scroll>Контакты</a></li>
             </ul>
         </div>
         
     </nav>
 </header>
+
+
 
 <!-- Main Page -->
 <main>
@@ -330,6 +332,44 @@
         </div>
     </div>
 </footer>
+
+
+
+
+
+<!-- MODALS -->
+
+<div id="modal1" class="modal mfp-hide">
+    <div class="modal__wrapper">
+        <div class="modal__top">
+            <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+        </div>
+        
+        <div class="contact__item">
+            <h2 class="section-title">Свяжитесь с нами</h2>
+
+            <p class="contact__text">Если у вас есть вопросы, то просто заполните форму ниже и мы свяжемся с вами в течение дня.</p>
+
+            <form class="contact-form" id="contact-form" method="post" action="send.php" onsubmit="return validate_form ( );">
+                <label>Имя</label>
+                <input name="name" type="text" placeholder="Введите ваше имя" required/>
+                
+                <label>Телефон</label>
+                <input name="phone" type="text" placeholder="Введите ваш номер телефона" required/>
+
+                <p class="contact__text">Нажимая кнопку «Отправить» вы автоматически даёте согласие с нашей политикой конфиденциальности и правилами обработки персональных данных</p>
+
+                <button class="btn" type="submit">Отправить заявку</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="./magnific/magnific-popup.css">
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="./magnific/jquery.magnific-popup.min.js"></script>
 
 </body>
 
