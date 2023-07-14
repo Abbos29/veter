@@ -419,6 +419,36 @@ nav {
   width: 100%;
 }
 
+.service__item {
+  display: block;
+  color: #1E1E1E;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.service__item:hover {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.service__item:hover .box__item-img {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.service__item:hover .box__item-img img {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 .box {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -751,7 +781,6 @@ td {
 }
 
 .scan__list {
-  padding-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -769,9 +798,14 @@ td {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 8px;
-  font-size: 17px;
+  gap: 6px;
+  font-size: clamp(0.75rem, 0.636rem + 0.57vw, 1.063rem);
   font-weight: 500;
+}
+
+.scan__list li img {
+  max-width: 30px;
+  width: 100%;
 }
 
 .contacts .hero__wrapper .box__item {
@@ -1145,6 +1179,14 @@ td {
 
   .contact__item {
     gap: 8px;
+  }
+
+  .scan__list {
+    gap: 8px;
+  }
+
+  .scan__list li img {
+    max-width: 24px;
   }
 
   .contacts .hero__wrapper {
