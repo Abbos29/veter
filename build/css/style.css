@@ -466,6 +466,11 @@ nav {
   gap: 8px;
 }
 
+.box__item a {
+  color: inherit;
+  text-decoration: underline;
+}
+
 .box__item-img {
   overflow: hidden;
   height: 350px;
@@ -708,7 +713,12 @@ button[type=submit]:focus {
           align-items: flex-start;
 }
 
+.contact__item a {
+  text-decoration: underline;
+}
+
 .contact__text {
+  color: inherit;
   font-weight: 500;
   font-size: clamp(0.875rem, 0.795rem + 0.36vw, 1.063rem);
 }
